@@ -1,0 +1,35 @@
+{
+  "name": "favorites",
+  "version": "1.0.0",
+  "description": "favorites.txt manager",
+  "main": "src/favorites.js",
+  "scripts": {
+    "lint": "standard src/**/*.js",
+    "compile": "babel src/favorites.js -o bin/favorites.js",
+    "test": "npm run lint && npm run compile",
+    "exec": "node bin/favorites.js",
+    "start": "npm test && npm run exec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChalkPE/favorites.git"
+  },
+  "keywords": [
+    "favorites"
+  ],
+  "author": "ChalkPE <chalk@chalk.pe>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChalkPE/favorites/issues"
+  },
+  "homepage": "https://github.com/ChalkPE/favorites#readme",
+  "dependencies": {
+    "axios": "^0.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-stage-2": "^6.24.1",
+    "standard": "^10.0.2"
+  }
+}
