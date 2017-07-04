@@ -2,7 +2,7 @@
   "name": "favorites",
   "version": "1.0.0",
   "description": "favorites.txt manager",
-  "main": "src/favorites.js",
+  "main": "main.js",
   "scripts": {
     "lint": "standard src/**/*.js",
     "compile": "babel src/favorites.js -o bin/favorites.js",
@@ -30,6 +30,7 @@
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.5.2",
     "babel-preset-stage-2": "^6.24.1",
+    "electron": "^1.6.11",
     "standard": "^10.0.2"
   }
 }
