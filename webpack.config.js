@@ -73,6 +73,7 @@ const alias = {
 }
 
 module.exports = {
+  target: 'electron',
   entry: './app/app.js',
 
   output: {
