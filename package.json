@@ -4,11 +4,9 @@
   "description": "favorites.txt manager",
   "main": "main.js",
   "scripts": {
-    "lint": "standard src/**/*.js",
-    "compile": "babel src/favorites.js -o bin/favorites.js",
-    "test": "npm run lint && npm run compile",
-    "exec": "node bin/favorites.js",
-    "start": "npm test && npm run exec"
+    "lint": "standard --plugin html '**/*.{js,vue}'",
+    "compile": "npm run lint && webpack --progress --hide-modules",
+    "start": "npm run compile && electron ."
   },
   "repository": {
     "type": "git",
@@ -24,13 +22,26 @@
   },
   "homepage": "https://github.com/ChalkPE/favorites#readme",
   "dependencies": {
-    "axios": "^0.16.2"
+    "axios": "^0.16.2",
+    "vue": "^2.3.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.5.2",
     "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.4",
     "electron": "^1.6.11",
-    "standard": "^10.0.2"
+    "eslint-plugin-html": "^3.0.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "node-sass": "^4.5.3",
+    "pug": "^2.0.0-rc.2",
+    "pug-loader": "^2.3.0",
+    "sass-loader": "^6.0.6",
+    "standard": "^10.0.2",
+    "style-loader": "^0.18.2",
+    "vue-loader": "^13.0.0",
+    "vue-template-compiler": "^2.3.4",
+    "webpack": "^3.0.0"
   }
 }
