@@ -23,7 +23,9 @@
   "homepage": "https://github.com/ChalkPE/favorites#readme",
   "dependencies": {
     "axios": "^0.16.2",
+    "babel-polyfill": "^6.23.0",
     "bulma": "^0.4.2",
+    "util.promisify": "^1.0.0",
     "vue": "^2.3.4"
   },
   "devDependencies": {
