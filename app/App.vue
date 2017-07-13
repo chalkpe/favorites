@@ -1,8 +1,7 @@
 <template lang="pug">
   v-app#app
     main
-      v-toolbar
-        v-toolbar-title Favorites
+      toolbar
       v-list
         v-list-tile(v-for='item in list', :key='item') {{ item }}
 </template>
@@ -13,10 +12,13 @@
   import electron from 'electron'
   import promisify from 'util.promisify'
 
+  import Toolbar from './components/Toolbar.vue'
+
   const { app } = electron.remote
   const readFile = promisify(fs.readFile)
 
   export default {
+    components: { Toolbar },
     data: () => ({ list: [] }),
 
     async created () {
