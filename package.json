@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "standard --plugin html '**/*.{js,vue}'",
     "compile": "npm run lint && webpack --progress --hide-modules",
-    "start": "npm run compile && electron ."
+    "start": "electron .",
+    "dev": "webpack-dev-server . --hot"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "style-loader": "^0.18.2",
     "vue-loader": "^13.0.0",
     "vue-template-compiler": "^2.3.4",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }

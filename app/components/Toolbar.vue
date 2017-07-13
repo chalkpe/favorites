@@ -1,6 +1,6 @@
 <template lang="pug">
-  v-toolbar
-    v-toolbar-title Favorites
+  v-toolbar.cyan(dark)
+    v-toolbar-title 아라코^^
 </template>
 
 <script>

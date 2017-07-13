@@ -8,11 +8,15 @@ let win = null
 app.on('ready', () => {
   win = new BrowserWindow({ width: 400, height: 600 })
 
-  win.loadURL(url.format({
-    slashes: true,
-    protocol: 'file:',
-    pathname: path.join(__dirname, 'index.html')
-  }))
+  if (require('process').NODE_ENV === 'production') {
+    win.loadURL(url.format({
+      slashes: true,
+      protocol: 'file:',
+      pathname: path.join(__dirname, 'index.html')
+    }))
+  } else {
+    win.loadURL('http://localhost:8888')
+  }
 
   win.on('closed', () => (win = null))
 })

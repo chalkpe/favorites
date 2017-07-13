@@ -79,5 +79,12 @@ module.exports = {
 
   plugins,
   module: { rules },
-  resolve: { alias }
+  resolve: { alias },
+
+  devServer: {
+    hot: true,
+    port: 8888,
+    host: '0.0.0.0',
+    historyApiFallback: true
+  }
 }
