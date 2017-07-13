@@ -1,9 +1,10 @@
 <template lang="pug">
-  #app
-    main: .container
-      table.table
-        tr(v-for='item in list')
-          td {{ item }}
+  v-app#app
+    main
+      v-toolbar
+        v-toolbar-title Favorites
+      v-list
+        v-list-tile(v-for='item in list', :key='item') {{ item }}
 </template>
 
 <script>
@@ -28,6 +29,6 @@
   }
 </script>
 
-<style lang="scss">
-  @import '~bulma';
+<style lang="stylus">
+  @import '~vuetify/src/stylus/main'
 </style>

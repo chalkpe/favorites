@@ -21,14 +21,9 @@ const loaders = {
     use: 'css-loader'
   }),
 
-  scss: ExtractTextPlugin.extract({
+  stylus: ExtractTextPlugin.extract({
     fallback: 'vue-style-loader',
-    use: ['css-loader', 'sass-loader']
-  }),
-
-  sass: ExtractTextPlugin.extract({
-    fallback: 'vue-style-loader',
-    use: ['css-loader', 'sass-loader?indentedSyntax']
+    use: ['css-loader', 'stylus-loader']
   })
 }
 
@@ -60,10 +55,10 @@ const rules = [
   },
 
   {
-    test: /\.s[ac]ss$/,
+    test: /\.styl$/,
     use: ExtractTextPlugin.extract({
       fallback: 'style-loader',
-      use: ['css-loader', 'sass-loader']
+      use: ['css-loader', 'stylus-loader']
     })
   }
 ]
