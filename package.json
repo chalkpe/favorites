@@ -25,8 +25,11 @@
     "axios": "^0.16.2",
     "babel-polyfill": "^6.23.0",
     "bulma": "^0.4.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
     "util.promisify": "^1.0.0",
-    "vue": "^2.3.4"
+    "vue": "^2.3.4",
+    "vuetify": "^0.13.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -37,10 +40,8 @@
     "electron": "^1.6.11",
     "eslint-plugin-html": "^3.0.0",
     "extract-text-webpack-plugin": "^2.1.2",
-    "node-sass": "^4.5.3",
     "pug": "^2.0.0-rc.2",
     "pug-loader": "^2.3.0",
-    "sass-loader": "^6.0.6",
     "standard": "^10.0.2",
     "style-loader": "^0.18.2",
     "vue-loader": "^13.0.0",
