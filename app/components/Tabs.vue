@@ -1,7 +1,6 @@
 <template lang="pug">
   v-tabs(dark, fixed, centered v-model='active')
-    toolbar
-    v-tabs-bar.cyan(slot='activators')
+    v-tabs-bar.pink.darken-1(slot='activators')
       v-tabs-slider.yellow
       v-tabs-item(
         v-for='tab in tabs',
@@ -25,7 +24,6 @@
 </template>
 
 <script>
-  import Toolbar from './Toolbar.vue'
   import Favorites from '../layouts/Favorites.vue'
 
   export default {
@@ -34,6 +32,10 @@
       tabs: ['급식', '좋아'],
       active: null
     }),
-    components: { Toolbar, Favorites }
+    components: { Favorites }
   }
 </script>
+
+<style lang="stylus">
+</style>
+

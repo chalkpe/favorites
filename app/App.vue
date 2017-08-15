@@ -1,6 +1,8 @@
 <template lang="pug">
-  v-app#app
+  v-app#app(standalone)
+    system-bar
     main
+      toolbar
       tabs(
         :favorites='list'
       )
@@ -12,6 +14,7 @@
   import electron from 'electron'
   import promisify from 'util.promisify'
 
+  import SystemBar from './components/SystemBar.vue'
   import Toolbar from './components/Toolbar.vue'
   import Tabs from './components/Tabs.vue'
 
@@ -19,7 +22,7 @@
   const readFile = promisify(fs.readFile)
 
   export default {
-    components: { Toolbar, Tabs },
+    components: { SystemBar, Toolbar, Tabs },
     data: () => ({
       list: [],
     }),
@@ -36,6 +39,9 @@
 
 <style lang="stylus">
   @import '~vuetify/src/stylus/main'
-  #wrapper
-    top: 2000px
+  ::-webkit-scrollbar
+    width: .0em
+
+  main
+    margin-top: 0px
 </style>

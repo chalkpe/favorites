@@ -6,9 +6,9 @@ const { app, BrowserWindow } = electron
 let win = null
 
 app.on('ready', () => {
-  win = new BrowserWindow({ width: 400, height: 600 })
+  win = new BrowserWindow({ width: 400, height: 600, frame: false })
 
-  if (require('process').NODE_ENV === 'production') {
+  if (require('process').env.NODE_ENV === 'production') {
     win.loadURL(url.format({
       slashes: true,
       protocol: 'file:',
