@@ -38,7 +38,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "util.promisify": "^1.0.0",
-    "vue": "^2.3.4",
+    "vue": "^2.5.17",
     "vuetify": "^0.13.1"
   },
   "devDependencies": {
